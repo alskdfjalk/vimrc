@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *nginx/*, *emao.*.conf if &ft == '' | setfiletype nginx | endif
+au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif

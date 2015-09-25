@@ -1213,4 +1213,4 @@ if !hasmapto('BufExplorerVerticalSplit') && g:bufExplorerDisableDefaultKeyMappin
     nnoremap <script> <silent> <unique> <Leader>bv :BufExplorerVerticalSplit<CR>
 endif
 
-" vim:ft=vim foldmethod=marker sw=4
+" vim:ft=vim foldmethod=marker sw=8

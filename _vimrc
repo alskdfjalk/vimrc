@@ -5,7 +5,14 @@
 
 let mapleader = ","
 let g:mapleader = ","
-:set ignorecase
+
+" 设置通用配置
+set ignorecase
+set textwidth=70
+set wrap
+set shiftwidth=8
+set tabstop=8
+
 " 设置winmanager
 " 设置界面分割
 let g:winManagerWindowLayout = "FileExplorer|TagList"
@@ -280,18 +287,17 @@ else
     set guifont=Monaco\ 11
 endif
 
-
 set backspace=2              " 设置退格键可用
 set autoindent               " 自动对齐
 set cindent                  " 类似C语言缩进
 set ai!                      " 设置自动缩进
 set smartindent              " 智能自动缩进
-set relativenumber           " 开启相对行号
+" set relativenumber           " 开启相对行号
 set nu!                      " 显示行号
 set ruler                    " 右下角显示光标位置的状态行
 set incsearch                " 开启实时搜索功能
 set hlsearch                 " 开启高亮显示结果
-set nowrapscan               " 搜索到文件两端时不重新搜索
+" set nowrapscan               " 搜索到文件两端时不重新搜索
 set nocompatible             " 关闭兼容模式
 set hidden                   " 允许在有未保存的修改时切换缓冲区
 set autochdir                " 设定文件浏览器目录为当前目录
@@ -304,8 +310,8 @@ set nobackup                 " 不生成备份文件
 set noswapfile               " 不生成交换文件
 set list                     " 显示特殊字符，其中Tab使用高亮~代替，尾部空白使用高亮点号代替
 set listchars=tab:\~\ ,trail:.
-set expandtab                " 将Tab自动转化成空格 [需要输入真正的Tab键时，使用 Ctrl+V + Tab]
-"set showmatch               " 显示括号配对情况
+" set expandtab                " 将Tab自动转化成空格 [需要输入真正的Tab键时，使用 Ctrl+V + Tab]
+set showmatch               " 显示括号配对情况
 
 syntax enable                " 打开语法高亮
 syntax on                    " 开启文件类型侦测
@@ -726,11 +732,11 @@ vmap <leader>rm <esc>:%s/<c-v><c-m>//g<cr>
 
 " \rt                 一键替换全部Tab为空格
 func! RemoveTabs()
-    if &shiftwidth == 2
+    if &shiftwidth == 8
         exec '%s/	/  /g'
-    elseif &shiftwidth == 4
+    elseif &shiftwidth == 8
         exec '%s/	/    /g'
-    elseif &shiftwidth == 6
+    elseif &shiftwidth == 8
         exec '%s/	/      /g'
     elseif &shiftwidth == 8
         exec '%s/	/        /g'
@@ -967,3 +973,5 @@ let blog.template_default  = 'site'
 let blog.template_ext      = '.html'
 let blog.auto_export       = 1
 let g:vimwiki_list         = [blog]
+
+

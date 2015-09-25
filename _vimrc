@@ -669,10 +669,6 @@ imap <m-l> <right>
 " 打开新文件"
 map <leader>rr :e<space>
 
-" 保存文件"
-map <leader>ww :w<cr>
-"
-"
 " 强制关闭"
 map <leader>q :q<cr>
 
